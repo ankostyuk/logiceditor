@@ -12,7 +12,7 @@ describe('app', function() {
 
     describe('DOM', function() {
         describe('title', function() {
-            const title = 'xxx';
+            const title = 'Logiceditor';
 
             it('browser title', function() {
                 expect(browser.getTitle()).toBe(title);

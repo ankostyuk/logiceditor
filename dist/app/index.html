@@ -4,12 +4,12 @@
         <meta charset=utf-8>
         <meta content="IE=edge" http-equiv=X-UA-Compatible>
         <meta content="width=device-width,initial-scale=1" name=viewport>
-        <meta content="xxx" name=description>
+        <meta content="Test for JS Developer to Logiceditor" name=description>
         <meta content="ankostyuk" name=author>
-        <title ng-bind='appConfig.name'>xxx</title>
-    <link href="css/app.1ea81f4386660de64c63.css" rel="stylesheet"></head>
+        <title ng-bind='appConfig.name'>Logiceditor</title>
+    <link href="css/app.35a043d14352a12651ff.css" rel="stylesheet"></head>
 
-    <body class="xxx" ng-class="{'ready': isAppReady()}">
+    <body class="logiceditor" ng-class="{'ready': isAppReady()}">
         <div class="container">
             <div class="row app-header">
                 <div class="col-xs-10">
@@ -17,9 +17,11 @@
                 </div>
                 <div class="col-xs-2 text-right" app-lang-switch></div>
             </div>
+            <h2 class="section-header">{{_tr("Табличный редактор")}}</h2>
+            <div app-table-editor></div>
             <hr class="app-footer">
         </div>
         <div app-error-message></div>
         <div np-loader ng-hide="isAppReady()"><div class="line-balls"></div></div>
-    <script type="text/javascript" src="js/app.1ea81f4386660de64c63.js"></script></body>
+    <script type="text/javascript" src="js/app.35a043d14352a12651ff.js"></script></body>
 </html>

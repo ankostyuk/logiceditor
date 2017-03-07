@@ -14,6 +14,10 @@ msgstr ""
 "CLDR_PLURAL_FORMS_FORMAT: one{0}other{1}\n"
 "X-Generator: Poedit 1.8.11\n"
 
+#: ../src/app/index.html:1
+msgid "Табличный редактор"
+msgstr "Table Editor"
+
 #: ../src/app/components/message/ui/views/error-message.html:1
 msgid "Что-то пошло не так"
 msgstr "Something went wrong"

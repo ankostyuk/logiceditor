@@ -7,6 +7,7 @@
 var appInfo = require('info/info');
 
 var _       = require('lodash'),
+    i18n    = require('i18n'),
     angular = require('angular');
 
 var ngModules = [
@@ -16,6 +17,8 @@ var ngModules = [
 
     require('app/components/lang/lang'),
     require('app/components/message/message'),
+
+    require('app/components/table-editor/table-editor'),
 
     require('utils/utils')
 ];
@@ -59,16 +62,11 @@ angular.module('app', _.map(ngModules, 'name'))
             isAppReady: function() {
                 return $rootScope.app.ready;
             }
-        });
+        }, i18n.translateFuncs);
 
         $timeout(function() {
             $rootScope.app.ready = true;
             $rootScope.$emit(appEvents['ready']);
-
-            // TODO remove when app is not xxx :)
-            $timeout(function() {
-                $rootScope.$emit(appEvents['error']);
-            }, 1000);
         }, appConfig.readyDelay);
     }]);
 //

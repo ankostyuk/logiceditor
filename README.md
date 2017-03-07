@@ -1,10 +1,16 @@
-# xxx
+# Logiceditor
 
-TODO
+[Test for JS Developer to Logiceditor](/docs/test-logiceditor-table-editor.md)
 
 # Application
 
-[xxx](https://ankostyuk.github.io/xxx/)
+[Logiceditor](https://ankostyuk.github.io/logiceditor/)
+
+# Dependencies & Licenses
+
+```
+// TODO
+```
 
 # Project
 

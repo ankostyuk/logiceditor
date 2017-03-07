@@ -7,6 +7,10 @@
         "cldrFormat": "one{0}few{1}many{2}other{2}"
       }
     },
+    "Табличный редактор": [
+      null,
+      ""
+    ],
     "Что-то пошло не так": [
       null,
       ""
@@ -20,6 +24,10 @@
         "cldrFormat": "one{0}other{1}"
       }
     },
+    "Табличный редактор": [
+      null,
+      "Table Editor"
+    ],
     "Что-то пошло не так": [
       null,
       "Something went wrong"

@@ -10,6 +10,9 @@
 @import '../components/lang/ui/styles/lang-ui.less';
 @import '../components/message/ui/styles/message-ui.less';
 
+@import '../components/table-editor/ui/styles/table-editor-ui.less';
+@import './table-editor.less';
+
 /* container */
 .container {
     visibility: hidden;
@@ -24,10 +27,11 @@
     margin-bottom: 54px;
 
     h1 {
-        margin: -18px 0 0 0;
+        margin: -25px 0 0 0;
         padding: 0;
         display: inline-block;
         width: 100%;
+        line-height: 1.5;
         .text-ellipsis;
     }
 
@@ -53,6 +57,10 @@
             border-bottom-left-radius: 3px;
         }
     }
+}
+
+.section-header {
+    margin-bottom: @componentMarginLarge;
 }
 
 /* app-footer */

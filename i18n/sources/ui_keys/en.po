@@ -24,4 +24,4 @@ msgstr "Русский"
 
 #: ../i18n/sources/ui_keys/src/keys.txt:1
 msgid "app.name"
-msgstr "xxx"
+msgstr "Logiceditor"

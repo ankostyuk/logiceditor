@@ -1,13 +1,13 @@
 {
-  "name": "xxx",
+  "name": "logiceditor",
   "version": "1.0.0-SNAPSHOT",
-  "description": "xxx",
+  "description": "Test for JS Developer to Logiceditor",
   "author": "Andrew Kostyuk <andrew.kostyuk@gmail.com> (https://ankostyuk.github.io)",
   "license": "MIT",
   "main": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ankostyuk/xxx"
+    "url": "https://github.com/ankostyuk/logiceditor"
   },
   "devDependencies": {
     "async": "^2.1.4",

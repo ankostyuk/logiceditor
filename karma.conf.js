@@ -45,7 +45,7 @@ module.exports = function(config) {
                 }),
                 new webpack.DefinePlugin({
                     CONFIG: JSON.stringify({
-                        'app.id': 'xxx',
+                        'app.id': 'logiceditor',
                         PRODUCTION: false
                     })
                 })
