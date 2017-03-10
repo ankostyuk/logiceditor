@@ -64,7 +64,7 @@ module.exports = function(options) {
                 test: /\.(ttf|eot)$/,
                 loader: 'file-loader?name=static/[name].[hash].[ext]'
             }, {
-                test: /\.html$/,
+                test: /\.(html|txt)$/,
                 loader: 'raw-loader'
             }, {
                 test: /\.json$/,

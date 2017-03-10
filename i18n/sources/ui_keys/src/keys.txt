@@ -4,3 +4,9 @@ app.name
 # App langs
 app.lang.name.ru
 app.lang.name.en
+
+# app.table-editor
+app.table-editor.table.property.name.name
+app.table-editor.table.property.value.name
+
+ng-pluralize.app.table-editor.table.records

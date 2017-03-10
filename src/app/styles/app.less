@@ -4,6 +4,7 @@
 @import './modal.less';
 @import './button.less';
 @import './link.less';
+@import './input.less';
 
 @import './np-loader.less';
 
@@ -60,13 +61,17 @@
 }
 
 .section-header {
-    margin-bottom: @componentMarginLarge;
+    margin-bottom: @componentMarginLarge + @componentMarginMedium;
 }
 
 /* app-footer */
 .app-footer {
     margin-top: 20px;
     margin-bottom: 40px;
+
+    hr {
+        padding-top: 20px;
+    }
 }
 
 /* by media */

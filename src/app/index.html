@@ -17,9 +17,14 @@
                 </div>
                 <div class="col-xs-2 text-right" app-lang-switch></div>
             </div>
-            <h2 class="section-header">{{_tr("Табличный редактор")}}</h2>
+            <h3 class="section-header">{{_tr("Табличный редактор")}}</h3>
             <div app-table-editor></div>
-            <hr class="app-footer">
+            <div class="app-footer">
+                <hr>
+                <div class="text-muted text-right">
+                    {{_tr("Шрифты иконок")}} &mdash;&nbsp;<a href="http://glyphicons.com/">Glyphicons</a>
+                </div>
+            </div>
         </div>
         <div app-error-message></div>
         <div np-loader ng-hide="isAppReady()"><div class="line-balls"></div></div>

@@ -18,6 +18,18 @@
     "app.name": [
       null,
       "Logiceditor"
+    ],
+    "app.table-editor.table.property.name.name": [
+      null,
+      "Наименование"
+    ],
+    "app.table-editor.table.property.value.name": [
+      null,
+      "Значение"
+    ],
+    "ng-pluralize.app.table-editor.table.records": [
+      null,
+      "{'0': 'Нет записей', 'one': '{} запись', 'few': '{} записи', 'many': '{} записей', 'other': '{} записи'}"
     ]
   },
   "en": {
@@ -39,6 +51,18 @@
     "app.name": [
       null,
       "Logiceditor"
+    ],
+    "app.table-editor.table.property.name.name": [
+      null,
+      "Name"
+    ],
+    "app.table-editor.table.property.value.name": [
+      null,
+      "Value"
+    ],
+    "ng-pluralize.app.table-editor.table.records": [
+      null,
+      "{'0': 'No records', 'one': '{} record', 'other': '{} records'}"
     ]
   }
 }

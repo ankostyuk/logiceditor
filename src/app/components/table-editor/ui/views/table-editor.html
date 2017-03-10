@@ -1,21 +1,103 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>XXX</td>
-            <td>AAA</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>YYY</td>
-            <td>BBB</td>
-        </tr>
-    </tbody>
-</table>
+<div class="content" ng-class="{'touch-support': touchSupport}">
+    <form class="open-file-form">
+        <span class="as-link attach-file-wrapper open-file text">
+            <span class="glyphicon glyphicon-open" aria-hidden="true"></span> ${_tr("Открыть файл с данными")}
+            <input type="file" name="file" accept="text/*,text/anytext,text/comma-separated-values,application/csv,json/*,json/anytext,application/json">
+        </span>
+        <span class="text text-muted" ng-show="fileName">...{{fileName}}</span>
+        <span class="text-danger" ng-show="fileFormatError">
+            <span class="text">&mdash;&nbsp;${_tr("Некорректные данные")} :(</span>
+            <span class="as-link text" ng-click="fileFormatIsShown = !fileFormatIsShown">${_tr("Проверьте формат данных...")}</span>
+        </span>
+        <div class="file-format" ng-show="fileFormatError && fileFormatIsShown">
+            <div class="row">
+                <div class="col-sm-6">
+                    <pre>{{::getRawPlaceholderByType('json')}}</pre>
+                </div>
+                <div class="col-sm-6">
+                    <pre>{{::getRawPlaceholderByType('csv')}}</pre>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-7 table-data" ng-class="{'empty': isTableEmpty(), 'row-reorder': isTableRowReorder(), 'change-mode': changeMode}">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><span>{{_tr('app.table-editor.table.property.name.name')}}</span></th>
+                        <th><span>{{_tr('app.table-editor.table.property.value.name')}}</span></th>
+                        <th class="col-actions">
+                            <button class="btn btn-link plain" type="button" ng-click="toggleChangeMode()">
+                                <span ng-hide="changeMode">${_trc("Изменить", "Изменить данные")}</span>
+                                <span ng-show="changeMode">${_trc("Готово", "Данные изменены")}</span>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody ui-sortable="sortableOptions" ng-model="records">
+                    <tr ng-repeat="record in records">
+                        <td class="col-data editable">
+                            <span contenteditable="true" content-text-editable ng-model="record.name"></span>
+                        </td>
+                        <td class="col-data editable">
+                            <span contenteditable="true" content-text-editable ng-model="record.value"></span>
+                        </td>
+                        <td class="col-actions">
+                            <span app-table-editor-row-actions>
+                                <a class="btn btn-link plain reorder-handle"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+                                <button class="btn btn-link plain danger" type="button" ng-click="removeRecord($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th class="table-info" colspan="2"><span ng-pluralize count="records.length" when="${_tr('ng-pluralize.app.table-editor.table.records')}"></span></th>
+                        <th class="col-actions">
+                            <button class="btn btn-default as-link" type="button" ng-click="addRecord()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="tools row">
+                <div class="col-sm-7">
+                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                    ${_tr("Сохранить как...")} &nbsp;
+                    <button class="btn btn-link plain in-text" type="button" ng-click="toFile('json')">JSON</button>
+                    <button class="btn btn-link plain in-text" type="button" ng-click="toFile('csv')">CSV</button>
+                </div>
+                <div class="col-sm-5 text-right">
+                    <div class="right-plain">
+                        <button class="btn btn-link plain in-text" type="button" ng-click="toRaw()">${_tr("Посмотреть данные")} <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-md-5 raw-data">
+            <div class="tools">
+                <div class="left-plain raw-format">
+                    <button class="btn btn-link plain action" type="button" ng-class="{'active': isJsonRaw()}" ng-click="setActiveRaw('json')">JSON</button>
+                    <button class="btn btn-link plain action" type="button" ng-class="{'active': isCsvRaw()}" ng-click="setActiveRaw('csv')">CSV</button>
+                </div>
+            </div>
+            <div class="raw-textarea">
+                <textarea class="form-control" rows="10" ng-model="raw.current"></textarea>
+                <pre ng-hide="raw.current">{{getRawPlaceholder()}}</pre>
+            </div>
+            <div class="raw-error" ng-show="raw.error">
+                <p class="text-danger">${_tr("Некорректные данные")} :(<br>${_tr("Преверьте формат данных, формат должен соответствовать...")}</p>
+                <pre>{{getRawPlaceholder()}}</pre>
+            </div>
+            <div class="tools">
+                <div class="left-plain">
+                    <button class="btn btn-link plain" type="button" ng-disabled="isRawEmpty()" ng-click="fromRaw()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> ${_tr("В таблицу")}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

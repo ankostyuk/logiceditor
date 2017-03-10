@@ -15,6 +15,7 @@
         "$": true,
         "jQuery": true,
         "ga": true,
+        "Uint8Array": true,
         "CONFIG": true
     },
 

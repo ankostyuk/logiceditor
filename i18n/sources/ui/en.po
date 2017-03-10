@@ -14,6 +14,44 @@ msgstr ""
 "CLDR_PLURAL_FORMS_FORMAT: one{0}other{1}\n"
 "X-Generator: Poedit 1.8.11\n"
 
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "В таблицу"
+msgstr "Into table"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Данные изменены"
+msgid "Готово"
+msgstr "Done"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Изменить данные"
+msgid "Изменить"
+msgstr "Edit"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Некорректные данные"
+msgstr "Incorrect data"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Открыть файл с данными"
+msgstr "Open data file"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Посмотреть данные"
+msgstr "View data"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Преверьте формат данных, формат должен соответствовать..."
+msgstr "Check the data format, the format must match..."
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Проверьте формат данных..."
+msgstr "Check the data format…"
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Сохранить как..."
+msgstr "Save as…"
+
 #: ../src/app/index.html:1
 msgid "Табличный редактор"
 msgstr "Table Editor"
@@ -21,3 +59,7 @@ msgstr "Table Editor"
 #: ../src/app/components/message/ui/views/error-message.html:1
 msgid "Что-то пошло не так"
 msgstr "Something went wrong"
+
+#: ../src/app/index.html:1
+msgid "Шрифты иконок"
+msgstr "Icon fonts"

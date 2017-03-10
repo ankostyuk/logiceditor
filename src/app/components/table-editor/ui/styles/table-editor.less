@@ -1,4 +1,347 @@
 /**/
 
+@appTableEditorMutedTextColor: #777;
+@appTableEditorActionActiveColor: #333;
+@appTableEditorTableBorderColor: #ddd;
+
+@appTableEditorTableEditCellColor: #337ab7;
+@appTableEditorTableEditCellHoverColor: #23527c;
+@appTableEditorTableEditCellHoverBorderColor: #66afe9;
+
+@appTableEditorTableCellPadding: 10px;
+
 [app-table-editor] {
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .content-nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    .tools {
+        padding-top: 7px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+
+        .btn.in-text {
+            margin-top: -3px;
+        }
+
+        .left-plain {
+            margin-left: -12px;
+        }
+        .right-plain {
+            margin-right: -12px;
+        }
+    }
+
+
+    .action.active {
+        color: @appTableEditorActionActiveColor;
+        font-weight: bold;
+        cursor: default;
+        outline: 0 none;
+    }
+
+    .open-file-form {
+        margin-bottom: 20px;
+        > span {
+            display: inline-block;
+            vertical-align: bottom;
+            margin-bottom: 10px;
+        }
+        .text {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+    }
+
+    .file-format {
+        padding-top: 20px;
+        margin-bottom: 20px;
+
+        pre {
+            height: 100px;
+            background-color: inherit;
+        }
+    }
+
+    .table-data {
+        padding-right: 40px;
+
+        .tools > div {
+            margin-bottom: 20px;
+        }
+
+        table {
+            position: relative;
+            table-layout: fixed;
+            border-collapse: separate;
+            margin: 0 0 20px 0;
+
+            thead {
+                th {
+                    height: 50px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+
+                    padding: 0;
+
+                    vertical-align: middle;
+                    border-bottom-width: 1px;
+                }
+                th:not(.col-actions) {
+                    .text-ellipsis;
+
+                    > span {
+                        padding-left: @appTableEditorTableCellPadding;
+                    }
+                }
+            }
+
+            tfoot {
+                th {
+                    height: 50px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    vertical-align: middle;
+                    border-top: 2px solid @appTableEditorTableBorderColor;
+                }
+
+                .table-info {
+                    padding-left: @appTableEditorTableCellPadding;
+                    color: @appTableEditorMutedTextColor;
+                    font-weight: normal;
+                    .text-ellipsis;
+                }
+            }
+
+            tbody {
+                th, td {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .col-data {
+                padding: 0 !important;
+                word-wrap: break-word;
+
+                > span {
+                    display: block;
+                    padding: @appTableEditorTableCellPadding;
+                    word-wrap: break-word;
+                    min-height: 40px;
+                }
+            }
+
+            .col-actions {
+                width: 100px;
+                padding: 0 !important;
+                text-align: right;
+                white-space: nowrap;
+            }
+            td.col-actions {
+                padding-top: 4px !important;
+            }
+
+            tbody {
+                position: relative;
+
+                .reorder-handle {
+                    cursor: pointer;
+                    cursor: grab;
+                    cursor: -moz-grab;
+                    cursor: -webkit-grab;
+                }
+
+                .ui-sortable-helper {
+                    display: block;
+                    position: relative;
+                    background-color: white;
+                    opacity: 0.75;
+
+                    border-top: 1px solid @appTableEditorTableBorderColor;
+                    border-bottom: 1px solid @appTableEditorTableBorderColor;
+
+                    [app-table-editor-row-actions] {
+                        visibility: visible !important;
+
+                        .reorder-handle {
+                            cursor: grabbing;
+                            cursor: -moz-grabbing;
+                            cursor: -webkit-grabbing;
+                        }
+
+                        .btn:not(.reorder-handle) {
+                            opacity: 0.25;
+                        }
+                    }
+
+                    td {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        border: 0 none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    .table-data.empty {
+        table thead {
+            visibility: hidden;
+        }
+    }
+
+    .touch-support .table-data.empty {
+        thead .col-actions button {
+            visibility: hidden;
+        }
+    }
+
+    .table-data:not(.row-reorder) {
+        .reorder-handle {
+            display: none;
+        }
+    }
+
+    //
+    thead .col-actions button {
+        visibility: hidden;
+    }
+
+    [app-table-editor-row-actions] {
+        visibility: hidden;
+    }
+
+    tbody > tr:hover [app-table-editor-row-actions] {
+        visibility: visible;
+    }
+
+    .table-data.change-mode {
+        [app-table-editor-row-actions] {
+            visibility: visible;
+        }
+
+        tbody td {
+            color: @appTableEditorTableEditCellColor;
+        }
+    }
+
+    tbody > tr:hover td {
+        color: @appTableEditorTableEditCellHoverColor;
+    }
+
+    tbody td.focus {
+        color: @appTableEditorTableEditCellHoverColor !important;
+    }
+
+    .touch-support {
+        thead .col-actions button {
+            visibility: visible;
+        }
+    }
+
+    //
+    .raw-data {
+        .raw-format button {
+            width: 65px;
+        }
+
+        form {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .raw-textarea {
+            position: relative;
+
+            textarea {
+                max-width: 100%;
+                resize: vertical;
+                background: transparent;
+                font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            }
+
+            pre {
+                position: absolute;
+                z-index: -10;
+                left: 0;
+                top: 20px;
+                right: 0;
+                bottom: 0;
+
+                border-color: transparent;
+                background-color: inherit;
+                color: @appTableEditorMutedTextColor;
+            }
+        }
+
+        .raw-error {
+            padding-top: 10px;
+
+            pre {
+                background-color: inherit;
+            }
+        }
+    }
+
+    //
+    .editable {
+        position: relative;
+        z-index: 10;
+    }
+    .editable:hover {
+        z-index: 20;
+        cursor: default;
+        -webkit-box-shadow: inset 0 0 0 1px rgba(102, 175, 233, 1);
+        box-shadow:         inset 0 0 0 1px rgba(102, 175, 233, 1);
+    }
+    .editable [contenteditable],
+    .editable [contenteditable]:focus {
+        outline: 0 none;
+    }
+    .editable.focus {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(102, 175, 233, 1), 0 0 8px rgba(102, 175, 233, 0.6);
+        box-shadow:         inset 0 0 0 1px rgba(102, 175, 233, 1), 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+
+@media (max-width: 992px) {
+    [app-table-editor] {
+        .table-data {
+            padding-right: 15px;
+        }
+
+        hr {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    [app-table-editor] {
+        .tools {
+            .text-right {
+                text-align: left;
+            }
+            .right-plain {
+                margin-right: 0;
+                margin-left: -12px;
+            }
+        }
+    }
 }

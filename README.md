@@ -6,11 +6,28 @@
 
 [Logiceditor](https://ankostyuk.github.io/logiceditor/)
 
+# Supported Browsers
+
+* Google Chrome 56
+* Mozilla Firefox 41
+* Opera 43
+* Microsoft Internet Explorer 11
+* Microsoft Internet Explorer 10 - Opening a file through a double click
+* Apple Safari 9.1.3 - File encoding trubles
+
+
 # Dependencies & Licenses
 
-```
-// TODO
-```
+* [angular](https://github.com/angular/angular.js) - [MIT](https://github.com/angular/angular.js/blob/master/LICENSE)
+* [angular-ui-sortable](https://github.com/angular-ui/ui-sortable) - [MIT](https://github.com/angular-ui/ui-sortable/blob/master/LICENSE)
+* [bootstrap](https://github.com/twbs/bootstrap) - [MIT](https://github.com/twbs/bootstrap/blob/v4-dev/LICENSE)
+* [jquery](https://github.com/jquery/jquery) - [Open](https://github.com/jquery/jquery/blob/master/LICENSE.txt)
+* [jquery-ui](https://github.com/jquery/jquery-ui) - [Open](https://github.com/jquery/jquery-ui/blob/master/LICENSE.txt)
+* [nullpointer-commons](https://github.com/newpointer/commons-js) - [MIT](https://github.com/newpointer/commons-js/blob/master/LICENSE)
+* [nullpointer-i18n](https://github.com/newpointer/i18n-js) - [MIT](https://github.com/newpointer/i18n-js/blob/master/LICENSE)
+* [Glyphicons](http://glyphicons.com/) - Icon Fonts into [Twitter Bootstrap](http://getbootstrap.com/components/#glyphicons)
+
+See [/package.json](/package.json) for more details.
 
 # Project
 

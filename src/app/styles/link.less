@@ -9,6 +9,12 @@
 
 .as-link {
     color: @defaultLinkColor;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .as-link:hover, .as-link:focus, .as-link.focus {
     color: @defaultLinkHoverColor;

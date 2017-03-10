@@ -24,3 +24,15 @@ msgstr ""
 #: ../i18n/sources/ui_keys/src/keys.txt:1
 msgid "app.lang.name.en"
 msgstr ""
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "app.table-editor.table.property.name.name"
+msgstr ""
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "app.table-editor.table.property.value.name"
+msgstr ""
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "ng-pluralize.app.table-editor.table.records"
+msgstr ""

@@ -17,6 +17,49 @@ msgstr ""
 msgid "Что-то пошло не так"
 msgstr ""
 
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Открыть файл с данными"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Некорректные данные"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Проверьте формат данных..."
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Изменить данные"
+msgid "Изменить"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Данные изменены"
+msgid "Готово"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Сохранить как..."
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Посмотреть данные"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Преверьте формат данных, формат должен соответствовать..."
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "В таблицу"
+msgstr ""
+
 #: ../src/app/index.html:1
 msgid "Табличный редактор"
+msgstr ""
+
+#: ../src/app/index.html:1
+msgid "Шрифты иконок"
 msgstr ""

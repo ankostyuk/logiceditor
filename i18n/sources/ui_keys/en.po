@@ -25,3 +25,15 @@ msgstr "Русский"
 #: ../i18n/sources/ui_keys/src/keys.txt:1
 msgid "app.name"
 msgstr "Logiceditor"
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "app.table-editor.table.property.name.name"
+msgstr "Name"
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "app.table-editor.table.property.value.name"
+msgstr "Value"
+
+#: ../i18n/sources/ui_keys/src/keys.txt:1
+msgid "ng-pluralize.app.table-editor.table.records"
+msgstr "{'0': 'No records', 'one': '{} record', 'other': '{} records'}"

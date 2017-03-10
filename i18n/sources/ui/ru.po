@@ -13,10 +13,52 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "CLDR_PLURAL_FORMS_FORMAT: one{0}few{1}many{2}other{2}\n"
 
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "В таблицу"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Данные изменены"
+msgid "Готово"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgctxt "Изменить данные"
+msgid "Изменить"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Некорректные данные"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Открыть файл с данными"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Посмотреть данные"
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Преверьте формат данных, формат должен соответствовать..."
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Проверьте формат данных..."
+msgstr ""
+
+#: ../src/app/components/table-editor/ui/views/table-editor.html:1
+msgid "Сохранить как..."
+msgstr ""
+
 #: ../src/app/index.html:1
 msgid "Табличный редактор"
 msgstr ""
 
 #: ../src/app/components/message/ui/views/error-message.html:1
 msgid "Что-то пошло не так"
+msgstr ""
+
+#: ../src/app/index.html:1
+msgid "Шрифты иконок"
 msgstr ""
