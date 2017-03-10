@@ -6,14 +6,17 @@
 
 [Logiceditor](https://ankostyuk.github.io/logiceditor/)
 
+
 # Supported Browsers
 
-* Google Chrome 56
-* Mozilla Firefox 41
-* Opera 43
-* Microsoft Internet Explorer 11
-* Microsoft Internet Explorer 10 - Opening a file through a double click
-* Apple Safari 9.1.3 - File encoding trubles
+* Google Chrome 56 - Mac OS X 10.9.5
+* Mozilla Firefox 41 - Mac OS X 10.9.5
+* Opera 43 - Mac OS X 10.9.5
+* Microsoft Internet Explorer 11 - Microsoft Windows 7
+* Microsoft Internet Explorer 10 - Microsoft Windows 7 - Opening a file through a double click
+* Apple Safari 9.1.3 - Mac OS X 10.9.5 - File encoding trubles
+* Google Chrome 47 - iOS 8.1.3 - Can't save data to file
+* Apple Safari - iOS 8.1.3, 10.2.1 - Can't save data to file, view only - encoding trubles for JSON
 
 
 # Dependencies & Licenses
@@ -28,6 +31,7 @@
 * [Glyphicons](http://glyphicons.com/) - Icon Fonts into [Twitter Bootstrap](http://getbootstrap.com/components/#glyphicons)
 
 See [/package.json](/package.json) for more details.
+
 
 # Project
 
