@@ -4,7 +4,7 @@
 
 # Application
 
-[Logiceditor](https://ankostyuk.github.io/logiceditor/)
+[Logiceditor](https://ankostyuk.github.io/logiceditor/dist/app/index.html)
 
 # Supported Browsers
 
